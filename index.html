@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qns1</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+   
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+    <link rel="shortcut icon" href="favicon/favicon.ico">
+    <link rel="icon" type="image/gif" href="favicon/animated_favicon1.gif">  
+
+
+</head>
+<body>
+    <header>
+        <h3>10 Javascript</h3>
+    </header>
+    <div class="row">
+
+        <div id="selecthead" class="col-md-12">
+            <div id="heading">Select</div><div id="headingadd">QNS</div>            
+        </div>
+
+        <div class="col-md-6" id="firstdisplay" style="display: inline;">
+               
+            <span>Q01</span><button onclick="primenumber();">Prime</button><br>
+            <span>Q02</span><button onclick="freqnumber();">Frequent</button> <br>
+            <span>Q03</span><button onclick="swapletter();">Swap case</button><br>
+            <span>Q04</span><button onclick="findsquare();">Square</button><br>
+            <span>Q05</span><button onclick="oddeven();">Odd or Even</button>
+
+        </div>   
+
+        <div class="col-md-6 " id="seconddisplay" style="display: inline;">
+              
+            <span>Q06</span><button onclick="truncatestring();">Truncate</button><br>         
+            <span>Q07</span><button onclick="largernum();">Larger</button><br>
+            <span>Q08</span><button onclick="arrangealpha();">Alphabatic</button><br>
+            <span>Q09</span><button onclick="printjava();">Print</button><br>
+            <span>Q10</span><button onclick="starpattern();">Pattern</button><br>
+            
+        </div>
+
+
+        <div class =" col-md-12" id="answerdisplay" style="display: none;">
+
+            <button onclick="backtohome();" style="float: right;"> Back</button>
+
+            <div id="qns01" style="display: none;">
+
+                <form onsubmit="return inputarray01()">
+                    <label>Enter number</label><br>
+                    <input type="number" id="box01">
+                    <button type="submit">Enter</button>
+                </form>
+                <div id="displaydata01">Entered Number</div>
+                <button onclick="cleardata();">Clear data</button>
+                <p>Check the first number entered prime or not</p>
+                <button onclick="checkprime();">Check</button>
+                <div id="displaydata01a">Ans</div>
+            </div>
+
+            <div id="qns02" style="display: none;">
+                <form onsubmit="return inputarray02()">
+                    <label>Enter number</label><br>
+                    <input type="text" id="box02">
+                    <button type="submit">Enter</button>
+                </form>
+                <div id="displaydata02">Entered Number</div>
+                <button onclick="cleardata();">Clear data</button>
+                <p>Find the frequent number in array</p>
+                <button onclick="checkfrequent();">Check</button>
+                <div id="displaydata02a">Ans</div>
+            </div>
+
+            <div id="qns03" style="display: none;">
+                <form onsubmit="return inputarray03()">
+                    <label>Enter number</label><br>
+                    <input type="text" id="box03">
+                    <button type="submit">Enter</button>
+                </form>
+                <div id="displaydata03">Entered string </div>
+                <button onclick="cleardata();">Clear data</button>
+                <p>Toggle the case entered</p>
+                <button onclick="swapCase();">Toggle Case</button>
+                <div id="displaydata03a">Ans</div>
+            
+            </div>
+            <div id="qns04" style="display: none;">
+                <form onsubmit="return inputarray04()">
+                    <label>Enter number</label><br>
+                    <input type="number" id="box04">
+                    <button type="submit">Enter</button>
+                </form>
+                <div id="displaydata04">Entered Number</div> 
+                <button onclick="cleardata();">Clear data</button>
+                <p>Sum of squares</p>
+                <button onclick="sumofSquares();">Outout</button>
+                <div id="displaydata04a">Ans</div>
+            
+
+            </div>
+            <div id="qns05" style="display: none;">
+
+                
+               <button onclick="findoddeven();">Odd or Even</button>
+            
+               <div id="displaydata05a">Ans</div>
+
+            </div>
+            <div id="qns06" style="display: none;">
+                <form onsubmit="return inputarray06()">
+                    <label>Enter string</label><br>
+                    <input type="text" id="box06a"><br>
+                    <label>Enter length</label><br>
+                    <input type="text" id="box06b">
+                    <button type="submit">Truncate</button>
+                    
+                </form>
+                <div id="displaydata06">Entered string</div>
+                <div id="displaydata06a">Truncated string</div>
+
+            </div>
+            <div id="qns07" style="display: none;">
+                <form onsubmit="return inputarray07()">
+                    <label>Firstnumber</label><br>
+                    <input type="number" id="box7a"><br>
+                    <label>Secondnumber</label><br>
+                    <input type="number" id="box7b"><br>
+                    <button type="submit" >Find Larger</button>
+                </form>
+                <div id="displaydata07a">Ans</div>
+            </div>
+            <div id="qns08" style="display: none;">
+                <form onsubmit="return inputarray08()">
+                    <label>Enter Words </label><br>
+                    <input type="text" id="box08">
+                    <button type="submit">Enter</button>
+                </form>
+                <div id="displaydata08">Entered Words</div>
+                 <button onclick="cleardata();">Clear data</button><br>
+                <button onclick="alphabatical();">Arrange</button>
+                <div id="displaydata08a">Ans</div>
+            </div>
+            <div id="qns09" style="display: none;">
+                
+                    <button onclick="trianglejava();">Print java</button>
+                    <div id="displaydata09a">Ans</div>
+            </div>
+            <div id="qns10" style="display: none;">
+                <button onclick="printPattern();">Print Star</button>
+                <div id="displaydata10a">Ans</div>
+
+            </div>
+            
+        </div>
+        
+        
+        
+        
+        
+        
+
+
+    </div>
+
+    
+</body>
+</html>
